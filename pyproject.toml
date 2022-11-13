@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["hykyo-25 <kyohei.530@icloud.com>"]
 readme = "README.md"
-packages = [{include = "cython_bbox"}]
 build = 'build.py'
 
 [tool.poetry.dependencies]
