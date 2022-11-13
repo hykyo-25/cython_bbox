@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cython_bbox"
+version = "0.1.0"
+description = ""
+authors = ["hykyo-25 <kyohei.530@icloud.com>"]
+readme = "README.md"
+packages = [{include = "cython_bbox"}]
+build = 'build.py'
+
+[tool.poetry.dependencies]
+python = ">=3.6.3"
+
+[build-system]
+requires = ["poetry-core", "cython", "numpy"]
+build-backend = "poetry.core.masonry.api"
