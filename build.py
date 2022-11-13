@@ -6,8 +6,14 @@
 # --------------------------------------------------------
 
 from Cython.Build import cythonize
+import os
 
 compiler_directives = {"language_level": 3, "embedsignature": True}
+
+if os.name == 'nt':
+    compile_args = {'gcc': ['/Qstd=c99']}
+else:
+    compile_args = ['-Wno-cpp']
 
 def build(setup_kwargs):
     setup_kwargs.update(
@@ -18,7 +24,7 @@ def build(setup_kwargs):
             "ext_modules": cythonize(
                 module_list="cython_bbox/cython_bbox.pyx",
                 exclude=[],
-                compiler_directives=compiler_directives,
+                compiler_directives=compile_args,
                 nthreads=5,
             ),
         }
