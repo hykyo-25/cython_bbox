@@ -11,5 +11,5 @@ build = 'build.py'
 python = ">=3.6.3"
 
 [build-system]
-requires = ["poetry-core", "cython", "numpy"]
+requires = ["poetry-core", "setuptools>=18.0","Cython","numpy"]
 build-backend = "poetry.core.masonry.api"
